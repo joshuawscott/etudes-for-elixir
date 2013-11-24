@@ -1,0 +1,20 @@
+-module(geom).
+-export([area/3]).
+
+-spec(area(atom(), number(),number()) -> number()).
+
+%% @doc Returns the area of a shape
+%%
+%% ## Examples
+%% 1> geom:area(rectangle, 3, 4).
+%% 12
+%% 2> geom:area(ellipse, 2, 3).
+%% 18.84955592153876
+%% 3> geom:area(triangle, 4, 5).
+%% 10.0
+%% 4> geom:area(rectangle, -1, 3).
+%% ** exception error: no function clause matching geom:area(rectangle,-1,3) (geom.erl, line 18)
+
+area(rectangle, A, B) -> A * B;
+area(triangle, A, B) -> (A * B) / 2.0;
+area(ellipse, A, B) -> A * B * math:pi().
