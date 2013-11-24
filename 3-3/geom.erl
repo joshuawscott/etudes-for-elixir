@@ -13,7 +13,7 @@
 %% 3> geom:area(triangle, 4, 5).
 %% 10.0
 %% 4> geom:area(rectangle, -1, 3).
-%% ** exception error: no function clause matching geom:area(rectangle,-1,3) (geom.erl, line 18)
+%% 0
 
 area(rectangle, A, B) when A >= 0, B >= 0 -> A * B;
 area(triangle, A, B) when A >= 0, B >= 0 -> (A * B) / 2.0;

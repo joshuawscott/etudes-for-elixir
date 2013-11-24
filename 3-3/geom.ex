@@ -11,8 +11,7 @@ defmodule Geom do
     iex> area(:ellipse, 2, 4)
     25.132741228718345
     iex> area(:rectangle, -1, 3)
-    ** (FunctionClauseError) no function clause matching in Geom.area/3
-    geom.ex:18: Geom.area(:rectangle, -1, 3)
+    0
   """
   @spec area(atom(), number(),number()) :: number()
 
